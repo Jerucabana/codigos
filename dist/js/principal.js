@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     limpar.addEventListener("click", function () {
         messageInput.value = "";
         codeInput.value = "";
-        resultadoCodificado.innerText = " ";
-        resultadoDecodificado.innerText = " ";
+        resultadoCodificado.innerText = "NULL";
+        resultadoDecodificado.innerText = "NULL";
     });
 });

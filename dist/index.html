@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Codificar</h1>
-    <textarea id="messageInput" rows="5" cols="50" placeholder="Digite sua mensagem aqui"></textarea><br>
-    <button id="encodeButton">Codificar</button>
-    <p>Mensagem codificada:</p>
-    <p class="msg_codificada"> </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensagens Secretas</title>
+  </head>
+  <body>
+    <div align="center"><h1>Gerador de Mensagens Secretas</h1></div>
+    <p>
+      Este código aprendi em um livrinho que era vendido na décade de 1980.
+      Fazia parte de uma coleção criada para divulgar os computadores e a antiga
+      linguagem BASIC que vinha nativa neles. Seu título era Programas de Jogos
+      de Espionagem.
+    </p>
+    <p>
+      Para mim naquela época este código era praticamente impenetrável. Só
+      aprendi realmente a dodificar e a decidificá-lo quando fui estudar o
+      programa para traduzir para o JavaScript. Ele envolve um misto da cifra de
+      César de chave aleatória, embaralhamento dos caracteres e claro, adiociona
+      letras para informar o decodificador.
+    </p>
+    <p>
+      Assim, considero este código como difícil de deduzir e de quebrar. Fora
+      que é difícil deduzir como decodificá-lo. Então, alguém que pegue uma
+      mensagem escrita com ele dificilmente será capaz de deduzir seu segredo e
+      mesmo que deduza, terá muito trabalho.
+    </p>
+    <p>
+      Este código foi criado para rodar nos computadores de antigamente e neles,
+      usava-se mais as letras maiúsculas. Portanto, fiz o código para refletir
+      isso. Qualquer mensagem digitada tanto para codificar ou para decodificar,
+      será automaticamente convertida para letras maiúsculas.
+    </p>
+    <p>
+      <u>Recomendações:</u>
+    </p>
+    <p>
+      Como este código tem origem no inglês, ele presume que as palavras não são
+      acentuadas. Portanto, não acentue. Ele também não vai lidar bem com
+      pontuação, como vírgulas e pontos. A mensagem final fica confusa, por
+      conta do embaralhamento feito. Você pode colocar depois de codificada, mas
+      não ponha na hora que for digitar para codificar ou decodificar.
+    </p>
+    <p>
+      Se sua mensagem for longa e você quiser tornar sua mensagem mais difícil
+      ainda de ser decodificada, digite um parágrafo por vez, porque quando a
+      mensagem é decodificada, um número aleatório será gerado e com isso, sua
+      mensagem terá uma chave de decodificação para cada parágrafo e não uma
+      chave para ela toda. Aí, para decodificar, também será preciso traduzir um
+      parágrafo por vez.
+    </p>
 
-    <h1>Decodificar</h1>
-    <textarea id="codeInput" rows="5" cols="50" placeholder="Digite sua mensagem aqui"></textarea><br>
-    <button id="decodeButton">Decodificar</button>
-    <p>Mensagem decodificada:</p>
-    <p class="msg_decodificada"> </p>
-
-    <section><button id="limparButton">Limpar Tudo</button></section>
-
+    <section class="principal">
+      <section class="content">
+        <section class="principal__entrada">
+          <h1>Codificar</h1>
+          <textarea
+            id="messageInput"
+            rows="5"
+            cols="50"
+            placeholder="Digite sua mensagem aqui"
+          ></textarea
+          ><br />
+          <button id="encodeButton">Codificar</button>
+          <p>Mensagem codificada:</p>
+          <p class="msg_codificada">NULL</p>
+        </section>
+        <section class="principal__entrada">
+          <h1>Decodificar</h1>
+          <textarea
+            id="codeInput"
+            rows="5"
+            cols="50"
+            placeholder="Digite sua mensagem aqui"
+          ></textarea
+          ><br />
+          <button id="decodeButton">Decodificar</button>
+          <p>Mensagem decodificada:</p>
+          <p class="msg_decodificada">NULL</p>
+        </section>
+      </section>
+      <div class="button01">
+        <button id="limparButton">Limpar Tudo</button>
+      </div>
+    </section>
     <script src="./js/principal.js"></script>
-    <link rel = "stylesheet" href="./styles/style.css">
-</body>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </body>
 </html>

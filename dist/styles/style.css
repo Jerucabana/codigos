@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Syne+Mono&display=swap');
+
 :root {
     --color01: #EEEDEB;
     --color02: #E0CCBE;
@@ -5,6 +8,60 @@
     --color04: #3C3633;
   }
 
+.syne-mono-regular {
+    font-family: "Syne Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.frijole-regular {
+    font-family: "Frijole", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body {
+    background-color: var(--color01);    
+}
+
+h1 {
+    font-family: "Frijole", system-ui;
+    font-weight: 400;
+    font-style:normal;
+    font-size: 30px;
+    color: var(--color04);
+}
+
+p {
+    font-family: "Syne Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color04);
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    width: 50%;
+    gap: 20px;
+}
+
+.principal__entrada {
+    display: flex;
     background-color: var(--color02);
+    border-style: ridge;
+    border-color: var(--color03);
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+
+.button01 {
+    margin: 20px;
+    align-self: center;
 }
