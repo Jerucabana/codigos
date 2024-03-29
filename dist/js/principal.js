@@ -1,7 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Define as constantes
+    // Primeiro box para a mensagem.
     const messageInput = document.getElementById("messageInput");
+    // Degundo box para a mensagem em código.
+    const codeInput = document.getElementById("codeInput");
+    // Botão de codificar
     const encodeButton = document.getElementById("encodeButton");
-    let resultado = document.getElementsByClassName("msg_codificada")[0];
+    // Botão de decodificar
+    const decodeButton = document.getElementById("decodeButton");
+    //Botão de Limpar Tudo
+    const limpar = document.getElementById("limparButton");
+    // Resultados, um para a mensagem final codificada e outro para a mensagem decodificada
+    // Serão exibidas na tela dependendo do que for escolhido.
+    let resultadoCodificado = document.getElementsByClassName("msg_codificada")[0];
+    let resultadoDecodificado = document.getElementsByClassName("msg_decodificada")[0];
+    // Se o botão de codificar for pressionado.
     encodeButton.addEventListener("click", function () {
         let mensagem = messageInput.value.toUpperCase();
         mensagem = "F" + mensagem;
@@ -25,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .split("")
             .reverse()
             .join("");
-        //mensagemCodificadaInvertida += chave;
         if (mensagemCodificadaInvertida.length % 2 == 0) {
             let mensagemReorganizada = "";
             // Percorre os caracteres dois a dois
@@ -33,10 +45,50 @@ document.addEventListener("DOMContentLoaded", function () {
                 mensagemReorganizada +=
                     mensagemCodificadaInvertida[i + 1] + mensagemCodificadaInvertida[i];
             }
-            resultado.innerText = mensagemReorganizada;
+            resultadoCodificado.innerText = mensagemReorganizada;
         }
         else {
-            resultado.innerText = mensagemCodificadaInvertida;
+            resultadoCodificado.innerText = mensagemCodificadaInvertida;
         }
+    }); //fim da codificação.
+    // Se o botão decodificar for pressionado
+    decodeButton.addEventListener("click", function () {
+        let mensagem = codeInput.value.toUpperCase();
+        // Reorganiza a mensagem duas a duas caso tenha número par de letras
+        if (mensagem.length % 2 == 0) {
+            let mensagemReorganizada = "";
+            // Percorre os caracteres dois a dois
+            for (let i = 0; i < mensagem.length; i += 2) {
+                mensagemReorganizada += mensagem[i + 1] + mensagem[i];
+            }
+            mensagem = mensagemReorganizada;
+        }
+        let chave = mensagem.charAt(0);
+        mensagem = mensagem.slice(1);
+        let codigoAsciiChave = chave.charCodeAt(0) - 64;
+        let codigoAsciiChaveNegativo = -codigoAsciiChave;
+        resultadoDecodificado.innerText = codigoAsciiChaveNegativo.toString();
+        let mensagemDescriptografada = "";
+        for (let i = 0; i < mensagem.length; i++) {
+            let codigoAscii = mensagem.charCodeAt(i);
+            if (codigoAscii >= 65 && codigoAscii <= 90) {
+                // Se o caractere é uma letra maiúscula
+                let novoCodigoAscii = ((codigoAscii - 65 + codigoAsciiChaveNegativo + 26) % 26) + 65;
+                mensagemDescriptografada += String.fromCharCode(novoCodigoAscii);
+            }
+            else {
+                mensagemDescriptografada += mensagem[i]; // Se não for uma letra, mantém o caractere original
+            }
+        }
+        mensagemDescriptografada = mensagemDescriptografada.slice(0, -1);
+        mensagem = mensagemDescriptografada.split("").reverse().join("");
+        // Exibe a mensagem descriptografada
+        resultadoDecodificado.innerText = mensagem;
+    });
+    limpar.addEventListener("click", function () {
+        messageInput.value = "";
+        codeInput.value = "";
+        resultadoCodificado.innerText = " ";
+        resultadoDecodificado.innerText = " ";
     });
 });
