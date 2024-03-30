@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 mensagemReorganizada +=
                     mensagemCodificadaInvertida[i + 1] + mensagemCodificadaInvertida[i];
             }
-            resultadoCodificado.innerText = mensagemReorganizada;
+            resultadoCodificado.value = mensagemReorganizada;
         }
         else {
-            resultadoCodificado.innerText = mensagemCodificadaInvertida;
+            resultadoCodificado.value = mensagemCodificadaInvertida;
         }
     }); //fim da codificação.
     // Se o botão decodificar for pressionado
@@ -83,12 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
         mensagemDescriptografada = mensagemDescriptografada.slice(0, -1);
         mensagem = mensagemDescriptografada.split("").reverse().join("");
         // Exibe a mensagem descriptografada
-        resultadoDecodificado.innerText = mensagem;
+        resultadoDecodificado.value = mensagem;
     });
     limpar.addEventListener("click", function () {
         messageInput.value = "";
         codeInput.value = "";
-        resultadoCodificado.innerText = "NULL";
-        resultadoDecodificado.innerText = "NULL";
+        resultadoCodificado.value = "";
+        resultadoDecodificado.value = "";
     });
 });

@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Serão exibidas na tela dependendo do que for escolhido.
   let resultadoCodificado = document.getElementsByClassName(
     "msg_codificada"
-  )[0] as HTMLParagraphElement;
+  )[0] as HTMLTextAreaElement;
   let resultadoDecodificado = document.getElementsByClassName(
     "msg_decodificada"
-  )[0] as HTMLParagraphElement;
+  )[0] as HTMLTextAreaElement;
 
   // Se o botão de codificar for pressionado.
   encodeButton.addEventListener("click", function () {
@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let numeroAleatorio = Math.floor(Math.random() * 25) + 1;
 
     let mensagemCodificada = "";
-
     // Lê a mensagem caractere por caractere e codifica
     for (let i = 0; i < mensagem.length; i++) {
       let codigoAscii = mensagem.charCodeAt(i);
@@ -53,14 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
         mensagemCodificada += mensagem[i]; // Se não for uma letra, mantém o caractere original
       }
     }
-
     let chave = String.fromCharCode(numeroAleatorio + 64);
     mensagemCodificada += chave;
     let mensagemCodificadaInvertida = mensagemCodificada
       .split("")
       .reverse()
       .join("");
-
     if (mensagemCodificadaInvertida.length % 2 == 0) {
       let mensagemReorganizada = "";
       // Percorre os caracteres dois a dois
@@ -68,15 +65,16 @@ document.addEventListener("DOMContentLoaded", function () {
         mensagemReorganizada +=
           mensagemCodificadaInvertida[i + 1] + mensagemCodificadaInvertida[i];
       }
-      resultadoCodificado.innerText = mensagemReorganizada;
+      resultadoCodificado.value = mensagemReorganizada;
     } else {
-      resultadoCodificado.innerText = mensagemCodificadaInvertida;
+      resultadoCodificado.value = mensagemCodificadaInvertida;
     }
   }); //fim da codificação.
 
   // Se o botão decodificar for pressionado
   decodeButton.addEventListener("click", function () {
     let mensagem = codeInput.value.toUpperCase();
+    
     // Reorganiza a mensagem duas a duas caso tenha número par de letras
     if (mensagem.length % 2 == 0) {
       let mensagemReorganizada = "";
@@ -112,13 +110,13 @@ document.addEventListener("DOMContentLoaded", function () {
     mensagemDescriptografada = mensagemDescriptografada.slice(0, -1);
     mensagem = mensagemDescriptografada.split("").reverse().join("");
     // Exibe a mensagem descriptografada
-    resultadoDecodificado.innerText = mensagem;
+    resultadoDecodificado.value = mensagem;
   });
 
   limpar.addEventListener("click", function () {
     messageInput.value = "";
     codeInput.value = "";
-    resultadoCodificado.innerText = "NULL";
-    resultadoDecodificado.innerText = "NULL";
+    resultadoCodificado.value = "";
+    resultadoDecodificado.value = "";
   });
 });
