@@ -15,22 +15,22 @@
     </p>
     <p>
       Para mim naquela época este código era praticamente impenetrável. Só
-      aprendi realmente a dodificar e a decidificá-lo quando fui estudar o
+      aprendi realmente a codificar e a decidificá-lo quando fui estudar o
       programa para traduzir para o JavaScript. Ele envolve um misto da cifra de
-      César de chave aleatória, embaralhamento dos caracteres e claro, adiociona
+      César de chave aleatória, embaralhamento dos caracteres e claro, adição de
       letras para informar o decodificador.
     </p>
     <p>
-      Assim, considero este código como difícil de deduzir e de quebrar. Fora
-      que é difícil deduzir como decodificá-lo. Então, alguém que pegue uma
-      mensagem escrita com ele dificilmente será capaz de deduzir seu segredo e
-      mesmo que deduza, terá muito trabalho.
+      Assim, considero este código como difícil de quebrar. É muito difícil
+      deduzir como decodificá-lo. Então, alguém que pegue uma mensagem escrita
+      com ele dificilmente será capaz de deduzir seu segredo e mesmo que o faça,
+      terá muito trabalho.
     </p>
     <p>
       Este código foi criado para rodar nos computadores de antigamente e neles,
-      usava-se mais as letras maiúsculas. Portanto, fiz o código para refletir
-      isso. Qualquer mensagem digitada tanto para codificar ou para decodificar,
-      será automaticamente convertida para letras maiúsculas.
+      usava-se mais as letras maiúsculas. Portanto, fiz toda a programação para
+      refletir isso. Qualquer mensagem digitada tanto para codificar como para
+      decodificar, será automaticamente convertida para letras maiúsculas.
     </p>
     <p>
       <u>Recomendações:</u>
@@ -39,14 +39,20 @@
       Como este código tem origem no inglês, ele presume que as palavras não são
       acentuadas. Portanto, tenha isso em mente antes de codificar suas
       mensagens. Letras acentuadas não serão modificadas. Serão tratadas como
-      espaços ou outros símbolos. Em algns testes que fiz, algumas mensagens
-      ficaram interessantes e outras nem tanto. Fica a seu critério.
+      símbolos neutros. Em algns testes que fiz, algumas mensagens ficaram
+      interessantes e outras nem tanto. Fica a seu critério.
     </p>
     <p>
       O codificador não vai lidar bem com pontuação, como vírgulas e pontos. A
       mensagem final fica confusa, por conta do embaralhamento feito. Você pode
       colocar depois de codificada, mas não ponha na hora que for digitar para
       codificar ou decodificar.
+    </p>
+    <p>
+      Tome também cuidado com a questão dos espaços. Em alguns testes que fiz,
+      houve mensagens que acabaram com dois espaços entre palavras. Se isso
+      acontecer, respeite o espaçamento duplo, senão a mensagem não será
+      decodificada corretamente.
     </p>
     <p>
       Se sua mensagem for longa e você quiser tornar sua mensagem mais difícil
@@ -76,7 +82,7 @@
             cols="50"
             placeholder="A mensagem aparecerá aqui"
           ></textarea
-          ><br>
+          ><br />
         </section>
         <section class="principal__entrada">
           <h1>Decodificar</h1>
@@ -95,7 +101,7 @@
             cols="50"
             placeholder="A mensagem aparecerá aqui"
           ></textarea
-          ><br>
+          ><br />
         </section>
       </section>
       <div class="button01">
