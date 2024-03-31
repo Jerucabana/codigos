@@ -63,7 +63,7 @@ p {
 
 .content {
     display: flex;
-    width: 60%;
+    width: 65%;
     gap: 20px;
 }
 
@@ -75,6 +75,18 @@ p {
     align-items: center;
     flex-direction: column;
     gap:5px;
+}
+
+.caixas_texto {
+    margin: 10px;
+}
+
+.msg_decodificada {
+    margin: 10px;
+}
+
+.msg_decodificada {
+    margin: 10px;
 }
 
 .bordeado {
