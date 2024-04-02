@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificação de Vigenère</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <nav class="cabecalho__menu">
+        <a class="cabecalho__menu__link" href="index.html">Home</a>
+        <a class="cabecalho__menu__link" href="codigo.html">Códigos</a>
+        <a class="cabecalho__menu__link" href="vigenere.html">Vigegnere</a>
+      </nav>
+    </header>
+    <main>
+      <section class="bordeado">
+        <img src="./resources/vigenere.jpg" align="left" />
+        <p>
+          A cifra de Vigenère é um método de criptografia que usa uma série de
+          diferentes cifras de César baseadas em letras de uma senha. Trata-se
+          de uma versão simplificada de uma mais geral cifra de substituição
+          polialfabética, inventada por Leone Battista Alberti cerca de 1465.
+        </p>
+        <p>
+          A invenção da cifra de Vigenère é erradamente atribuída a Blaise de
+          Vigenère; encontra-se originalmente descrita por Giovan Batista Belaso
+          no seu livro datado de 1553 com o título La cifra del. Sig. Giovan
+          Batista Belaso.
+        </p>
+        <p>
+          Esta cifra é muito conhecida porque é fácil de entender e de por em
+          prática, parecendo, a quem tem pouca prática, que é inquebrável
+          (indecifrável). Consequentemente, muitos programadores implementaram
+          esquemas de criptografia nas suas aplicações que são no essencial
+          cifras de Vigenère, e que são facilmente quebradas por qualquer
+          criptoanalista.
+        </p>
+        <p>
+          Numa cifra de César, cada letra do alfabeto é deslocada da sua posição
+          um número fixo de lugares; por exemplo, se tiver um deslocamento de 3,
+          A torna-se D, B fica E, etc. A cifra de Vigenère consiste no uso de
+          várias cifras de César em sequência, com diferentes valores de
+          deslocamento ditados por uma "palavra-chave".
+        </p>
+        <p>
+          Para cifrar, é usada uma tabela de alfabetos que consiste no alfabeto
+          escrito 26 vezes em diferentes linhas, cada um deslocado ciclicamente
+          do anterior por uma posição. As 26 linhas correspondem às 26 possíveis
+          cifras de César. Uma palavra é escolhida como "palavra-chave", e cada
+          letra desta palavra vai indicar a linha a ser utilizada para cifrar ou
+          decifrar uma letra da mensagem.
+        </p>
+        <div align="center">
+          <img src="./resources/vigenere-square.png" align="center" />
+        </div>
+        <p>
+          Preciso apenas discordar de um ponto desse texto que encontrei na
+          Wikipedia. Se formos parar para pensar, realmente se alguém souber que
+          o cógigo usado é Vigegnère e a chave for uma palavra curta, é
+          realmente muito fácil de quebrar. Foi o que Charles Babbage descobriu,
+          partino do princípio de que todos utilizavam chaves curtas, de até 6
+          caracteres.
+        </p>
+        <p>
+          Porém, se a chave for tão longa quanto a mensagem, seria lógico dizer
+          que teremos uma cifra realmente inquebrável. E é esse o princípio por
+          trás da Máquina Enigma.
+        </p>
+      </section>
+      <section class="principal">
+        <h1>Codificação de Vigenère</h1>
+        <label for="chave">Chave:</label>
+        <input type="text" id="chave" /><br />
+        <p>Mensagem:</p>
+        <textarea
+          class="caixas_texto"
+          id="mensagem"
+          rows="5"
+          cols="50"
+          placeholder="Digite sua mensagem aqui"
+        ></textarea>
+        <br />
+        <button id="botaoCodificar">Codificar</button>
+        <p>Mensagem em Código:</p>
+        <textarea
+          class="caixas_texto"
+          id="mensagemCodificada"
+          rows="5"
+          cols="50"
+          placeholder="Digite sua mensagem aqui"
+        ></textarea>
+        <br />
+        <button id="botaoDecodificar">Decodificar</button>
+        <p>Mensagem Decodificada:</p>
+        <textarea
+          class="caixas_texto"
+          id="mensagemDecodificada"
+          rows="5"
+          cols="50"
+          placeholder="Digite sua mensagem aqui"
+        ></textarea>
+        <br />
+        <button id="botaoLimpar">Limpar tudo</button><br />
+      </section>
+    </main>
+    <footer></footer>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/vigenere.js"></script>
+  </body>
+</html>
