@@ -92,7 +92,13 @@ p {
 .bordeado {
     margin: 50px;
 }
+
 .button01 {
     margin: 20px;
     align-self: center;
+}
+
+.tabela {
+    align-self: center;
+    border: 5px;
 }
