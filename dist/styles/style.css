@@ -99,6 +99,33 @@ p {
 }
 
 .tabela {
-    align-self: center;
     border: 5px;
 }
+
+.tabela__link{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color04);
+    text-decoration: none;
+    }
+
+.celulas:hover {
+    background-color: var(--color02);
+}
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 440px;
+    margin: auto;
+  }
+  
+  figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+  }

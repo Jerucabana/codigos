@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>História</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <nav class="cabecalho__menu">
+        <a class="cabecalho__menu__link" href="index.html">Home</a>
+        <a class="cabecalho__menu__link" href="codigos.html">Códigos</a>
+      </nav>
+    </header>
+    <main class="bordeado">
+      <div align="center">
+        <h1>Um pouco da história da Criptologia</h1>
+      </div>
+
+      <p>A criptologia é uma ciência recente.</p>
+      <p>
+        Embora ela seja usada há milhares de anos para ocultar mensagens
+        secretas, o estudo sistemático da criptologia como ciência (e talvez
+        arte) começou há cerca de cem anos.
+      </p>
+      <p>
+        A primeira evidência conhecida do uso da criptografia (de alguma forma)
+        foi encontrada em uma inscrição esculpida por volta de 1900 a.C., na
+        câmara principal do túmulo do nobre <a href="https://en.wikipedia.org/wiki/Khnumhotep_II" target="_blank">Khnumhotep</a>, no Egito. O escriba
+        usou alguns símbolos hieroglíficos incomuns no lugar de outros mais
+        comuns. O objetivo não era esconder a mensagem, mas talvez mudar sua
+        forma de modo que parecesse conceituada. A inscrição não era uma forma
+        de escrita secreta, mas incorporava algum tipo de transformação no texto
+        original, e é o texto mais antigo conhecido a fazer isso. Foram vistas
+        evidências do uso da criptografia na maioria das civilizações antigas. <a href="https://www.worldhistory.org/Arthashastra/" target="_blank">Arthshashtra</a>, uma obra clássica sobre política pública escrita por
+        Kautilya, descreve o serviço de espionagem na Índia e menciona tarefas
+        dadas a espiões usando uma "escrita secreta". Seria uma versão antiga de
+        James Bond?
+      </p>
+      <p>
+        Avançando na história, por volta de 100 a.C., Júlio César era conhecido
+        por usar uma forma de criptografia para transmitir mensagens secretas
+        aos generais do exército na linha de frente de guerra. Essa cifra de
+        substituição, conhecida como Cifra de César, é talvez a cifra histórica
+        mais mencionada na literatura acadêmica. Uma cifra é um algoritmo usado
+        para criptografia ou descriptografia. Em uma cifra de substituição, cada
+        caractere do texto simples (a mensagem que precisa ser criptografada) é
+        substituído por outro caractere para formar o texto cifrado (a mensagem
+        criptografada). A variante usada por César foi um deslocamento de três
+        cifras. Cada caractere foi deslocado em três casas, portanto, o
+        caractere "A" foi substituído por "D", "B" foi substituído por "E" e
+        assim por diante. No final, o deslocamento volta ao início, então "X"
+        será substituído por "A".
+      </p>
+      
+      <figure>
+        <img src="./resources/cifracesar.png" />
+        <figcaption>Cifra de César</figcaption>
+      </figure>
+      
+      <p>É fácil ver que essas cifras dependem do sigilo do sistema e não da chave de criptografia. Quando o sistema é conhecido, é fácil descriptografar essas mensagens criptografadas. Na verdade, as cifras de substituição podem ser corrompidas usando a frequência das letras no idioma.</p>
+      <p>Durante o século 16, Vigenere criou uma cifra que, supostamente, foi a primeira cifra a usar uma chave de criptografia. Em uma de suas cifras, a chave de criptografia foi repetida várias vezes por toda a mensagem e, em seguida, o texto cifrado foi produzido adicionando o caractere da mensagem com o caractere-chave módulo 26. Módulo, ou mod, é uma expressão matemática na qual você calcula o restante de uma divisão quando um número é dividido por outro. Como acontece com a cifra de César, a cifra de Vigenere também pode ser facilmente corrompida, mas foi ela que trouxe a ideia de introduzir chaves de criptografia, embora tenha sido mal executada. Em comparação com a cifra de César, o sigilo da mensagem depende do sigilo da chave de criptografia, e não do sigilo do sistema.</p>
+
+      <figure>
+        <img src="./resources/cifravig.png" />
+        <figcaption>Cifra de Vigenere</figcaption>
+      </figure>
+
+      <p>No início do século 19, quando tudo se tornou elétrico, Hebern projetou uma engenhoca eletromecânica chamada de "máquina de rotores de Hebern". Ela usa um único rotor, no qual a chave secreta é incorporada a um disco rotativo. A chave codificava uma tabela de substituição, e cada tecla pressionada no teclado resultava em texto cifrado. Isso também fazia o disco girar em um entalhe e uma tabela diferente era usada para o próximo caractere de texto simples. Isso foi novamente corrompido pelo uso de frequências de letras.</p>
+      <p>A máquina Engima foi inventada pelo engenheiro alemão Arthur Scherbius no final da Primeira Guerra Mundial e foi muito usada pelas forças alemãs durante a Segunda Guerra Mundial. A máquina Enigma usava três, quatro ou até mais rotores. Os rotores giram em ritmos diferentes conforme você digita no teclado e produzem as letras apropriadas do texto cifrado. Nesse caso, a chave era a configuração inicial dos rotores.</p>
+      <p>A cifra da máquina Enigma acabou sendo corrompida pela Polônia, e a tecnologia foi posteriormente transferida para os criptógrafos britânicos, que criaram uma maneira de obter uma chave diária.</p>
+
+      <figure>
+        <img src="./resources/enigma.png" />
+        <figcaption>Máquina Enigma</figcaption>
+      </figure>
+
+      <p>Até a Segunda Guerra Mundial, a maioria do trabalho sobre criptografia era para fins militares, geralmente usada para ocultar informações militares secretas. No entanto, a criptografia atraiu a atenção do mercado no pós-guerra, com empresas tentando proteger seus dados dos concorrentes.</p>
+      <p>No início dos anos 1970, a IBM percebeu que seus clientes exigiam alguma forma de criptografia. Assim, ela formou um "grupo de criptografia" liderado por Horst-Feistel. Eles criaram uma cifra chamada Lúcifer. Em 1973, o Nation Bureau of Standards (agora NIST), nos EUA, solicitou propostas para uma cifra de bloco que se tornaria um padrão nacional. Eles haviam obviamente percebido estarem comprando muitos produtos comerciais sem um suporte de criptografia de qualidade. O Lúcifer acabou sendo aceito e recebeu o nome de DES ou Data Encryption Standard (Padrão de Criptografia de Dados). Em 1997 e nos anos seguintes, o DES foi corrompido por um ataque de busca exaustivo. O principal problema do DES era o tamanho pequeno da chave de criptografia. Com o aumento do poder de computação, ficou mais fácil forçar todas as diferentes combinações de chaves para obter uma possível mensagem de texto simples.</p>
+      <p>Em 1997, o NIST novamente realizou uma proposta de uma nova cifra de bloco. Eles receberam 50 envios. Em 2000, aceitaram o Rijndael e o batizaram de AES ou Advanced Encryption Standard (Padrão de Criptografia Avançado). Hoje, o AES é um padrão amplamente aceito e usado para criptografia simétrica.</p>
+      <p>Nos últimos tempos, os avanços nos computadores quânticos nos levaram a pensar sobre a <a href="https://www.redhat.com/en/blog/post-quantum-cryptography#comment-1282711" target="_blank">criptografia pós-quântica</a>. Em 2016, o NIST anunciou uma <a href="https://www.federalregister.gov/documents/2016/12/20/2016-30615/announcing-request-for-nominations-for-public-key-post-quantum-cryptographic-algorithms" target="_blank">"chamada à apresentação de propostas"</a> em busca de ajuda pública para criar algoritmos resistentes à computação quântica que pudessem nos auxiliar a <a href="https://www.nist.gov/news-events/news/2022/07/nist-announces-first-four-quantum-resistant-cryptographic-algorithms" target="_blank">"resistir ao ataque de um futuro computador quântico"</a>. Em 2020, o NIST anunciou <a href="https://www.nist.gov/news-events/news/2022/07/nist-announces-first-four-quantum-resistant-cryptographic-algorithms" target="_blank">quatro finalistas para o prêmio</a>.</p>
+      <p>Para concluir, a história nos ensina:</p>
+
+    <ol>
+        <li><p>O sigilo da sua mensagem deve sempre depender do sigilo da chave, e não do sigilo do sistema de criptografia. Isso é conhecido como princípio de Kerckhoffs.</p></li>
+        <li><p>Em relação ao exposto acima, sempre use cifras que tenham sido revisadas publicamente e definidas como padrão. Não é recomendável usar "criptografia secreta" porque, assim como a cifra de César, assim que o sistema é conhecido, todas as mensagens podem ser descriptografadas. Por exemplo, se sua chave estiver comprometida, um invasor poderá acessar suas mensagens. No entanto, se ele puder comprometer o próprio sistema de criptografia, poderá acessar o texto simples de cada mensagem (não apenas para uma única pessoa) criptografada por esse sistema.</p></li>
+    </ol>
+    
+      <p>Fonte:</p>
+      <a href="https://www.redhat.com/pt-br/blog/brief-history-cryptography" target="_blank">Blog da Red Hat</a>
+      <br>
+    </main>
+    <footer></footer>
+    <link rel="stylesheet" href="./styles/style.css">
+  </body>
+</html>
